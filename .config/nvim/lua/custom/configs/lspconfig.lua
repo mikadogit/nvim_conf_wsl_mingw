@@ -13,6 +13,6 @@ lspconfig.clangd.setup {
     "clangd",
     "--offset-encoding=utf-16",
     "--header-insertion=never",
-    --"--query-driver=/usr/bin/x86_64-w64-mingw32-g++"
+    "--query-driver=/usr/bin/x86_64-w64-mingw32-g++"
   },
 }

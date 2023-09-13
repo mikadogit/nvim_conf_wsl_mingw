@@ -31,6 +31,14 @@ M.dap = {
       "<cmd> :lua require('dap').set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>",
       "Debugger : break condition",
     },
+    ["<leader>dq"] = {
+        "<cmd> :lua require('dapui').close()<CR>",
+        "Debugger : close IHM"
+    },
+    ["<leader>dc"] = {
+        "<cmd> :lua require('dap').clear_breakpoints()<CR>",
+        "Debugger : clear all breakpoints"
+    },
     ["<leader>bb"] = {
       "<cmd> :lua require('dap').toggle_breakpoint()<CR>",
       "Debugger : toggle breakpoint",
@@ -62,7 +70,20 @@ M.dap = {
     ["<leader>pp"] = {
       "<cmd> echo expand('%:p')<CR>",
       "Print current file path",
-    }
+    },
+    ["<leader>ll"] = {
+      "<cmd> TroubleToggle<CR>",
+      "List Warnings Errors ...",
+    },
+    ["<leader>ml"] = {
+      "<cmd>:!make 2>&1 | tee make_logs.txt <CR>",
+      "Make the .makefile saving errors and warnings into make_logs.txt",
+    },
+    ["<leader>mc"] = {
+      "<cmd>:! make clean & rm make_logs.txt <CR>",
+      "Make clear",
+    },
+
 
     -- ["<leader>dr"] = {
    --   "<cmd> DapContinue <CR>",

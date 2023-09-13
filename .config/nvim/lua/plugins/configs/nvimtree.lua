@@ -48,7 +48,7 @@ local options = {
       },
 
       glyphs = {
-        default = "",
+        default = "󰈚",
         symlink = "",
         folder = {
           default = "",

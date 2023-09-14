@@ -83,8 +83,6 @@ M.dap = {
       "<cmd>:! make clean & rm make_logs.txt <CR>",
       "Make clear",
     },
-
-
     -- ["<leader>dr"] = {
    --   "<cmd> DapContinue <CR>",
    --   "Start or continue the debugger",

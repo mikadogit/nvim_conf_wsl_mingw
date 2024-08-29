@@ -27,15 +27,15 @@ CXX = /usr/bin/x86_64-w64-mingw32-g++
 #The C++/C compilation flags : 
 CXXFLAGS = -g3 -O0 -Wall -Wconversion -Wsign-conversion -fmessage-length=0
 #The archive builder flages : 
-ARFLAGS = 
+ARFLAGS = rc
 
 #Bin name generation
 EXE =Test_DUT_ARTIQ.exe
 
 #Archive component : 
-AR = 
+AR = src\main.o src\test.o
 #Lib NAME : 
-LIBRARY = 
+LIBRARY = libexp.a
 
 #Build destination
 BUILDFOLDER =Debug_ARTIQ

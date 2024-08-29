@@ -141,28 +141,28 @@ endif
 objs: $(OBJS) $(AROBJ)
 %.o:%.c
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
-		cp $@ $(BUILDDIR)/
+		# cp $@ $(BUILDDIR)/
 %.o:%.C
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
-		cp $@ $(BUILDDIR)/
+		# cp $@ $(BUILDDIR)/
 %.o:%.cc
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
-		cp $@ $(BUILDDIR)/
+		# cp $@ $(BUILDDIR)/
 %.o:%.cpp
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
-		cp $@ $(BUILDDIR)/
+		# cp $@ $(BUILDDIR)/
 %.o:%.CPP
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
-		cp $@ $(BUILDDIR)/
+		# cp $@ $(BUILDDIR)/
 %.o:%.c++
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
-		cp $@ $(BUILDDIR)/
+		# cp $@ $(BUILDDIR)/
 %.o:%.cp
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
-		cp $@ $(BUILDDIR)/
+		# cp $@ $(BUILDDIR)/
 %.o:%.cxx
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
-		cp $@ $(BUILDDIR)/
+		# cp $@ $(BUILDDIR)/
 
 all: dir $(BUILDDIR)/$(EXE)
 	@echo Build complete for $(ECHO_MESSAGE)

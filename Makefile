@@ -183,7 +183,6 @@ ar : dir $(LIBRARY)
 $(LIBRARY) : $(AROBJ)
 	ar $(ARFLAGS) $@ $(AROBJ)
 	ranlib $@
-	mv $@ $(BUILDDIR)
 
 	
 clean:
@@ -192,7 +191,7 @@ clean:
 clean_obj:
 	$(RM) $(OBJS)
 	
-clean_ar:
+clean_lib: clean_obj
 	$(RM) $(BUILDDIR)/$(LIBRARY)
 
 help:
@@ -200,7 +199,7 @@ help:
 	@echo '  ar        (=make) compile and build a library.'
 	@echo '  clean     clean objects and the executable file.'
 	@echo '  clean_obj clean objects only.'
-	@echo '  clean_ar  clean archive.'
+	@echo '  clean_lib  clean archive or lib.'
 	@echo '  show      show variables (for debug use only).'
 	@echo '  help      print this message.'
 	@echo

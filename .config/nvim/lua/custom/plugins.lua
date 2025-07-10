@@ -2,7 +2,10 @@ local plugins = {
   {
     "rcarriga/nvim-dap-ui",
     event = "VeryLazy",
-dependencies = "mfussenegger/nvim-dap",
+dependencies = { 
+    "mfussenegger/nvim-dap",
+    "nvim-neotest/nvim-nio",
+    },
     config = function ()
       local dap = require("dap")
       local dapui = require("dapui")
@@ -92,7 +95,7 @@ dependencies = "mfussenegger/nvim-dap",
       -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
       -- animation = true,
       -- insert_at_start = true,
-      -- …etc.
+      -- â€¦etc.
     },
     version = '^1.0.0', -- optional: only update when a new 1.x version is released
   },

@@ -166,6 +166,20 @@ objs: $(OBJS) $(AROBJ)
 
 all: dir $(BUILDDIR)/$(EXE)
 	@echo Build complete for $(ECHO_MESSAGE)
+	@for libpath in $(LDFLAGS); do \
+		dir=$$(echo $$libpath | cut -c3-); \
+		for lib in $(LIBS); do \
+			libname1=$$(echo $$lib | sed 's/-l/lib/').dll; \
+			libname2=$$(echo $$lib | sed 's/-l//').dll; \
+			if [ -f "$$dir/$$libname1" ]; then \
+				cp "$$dir/$$libname1" $(BUILDDIR); \
+				echo "$$libname1 copié"; \
+			elif [ -f "$$dir/$$libname2" ]; then \
+				cp "$$dir/$$libname2" $(BUILDDIR); \
+				echo "$$libname2 copié"; \
+			fi \
+		done \
+	done
 	
 dir :
 	mkdir -p $(BUILDDIR)

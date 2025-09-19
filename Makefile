@@ -208,6 +208,12 @@ clean_obj:
 clean_lib: clean_obj
 	$(RM) $(BUILDDIR)/$(LIBRARY)
 
+clean_exe : clean_obj
+	$(RM) $(BUILDDIR)/$(EXE)
+
+exe: dir $(BUILDDIR)/$(EXE)
+	@echo Build complete for $(ECHO_MESSAGE)
+
 help:
 	@echo '  all       (=make) compile and link.'
 	@echo '  ar        (=make) compile and build a library.'
@@ -226,4 +232,5 @@ show:
 	@echo 'LIBS        :' $(LIBS)
 	@echo 'OBJS        :' $(OBJS)
 	@echo 'EXLUDE      :' $(EXCLUDEFILES)
+
 

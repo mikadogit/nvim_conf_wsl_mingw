@@ -34,19 +34,6 @@ dependencies = {
       },
   },
   {
-  "WhoIsSethDaniel/mason-tool-installer.nvim",
-  dependencies = { "williamboman/mason.nvim" },
-  config = function()
-    require("mason-tool-installer").setup({
-      ensure_installed = {
-        "tree-sitter-cli",
-      },
-      auto_update = false,
-      run_on_start = true,
-    })
-  end,
-},
-  {
     "mfussenegger/nvim-dap",
     config = function (_, _)
       require("core.utils").load_mappings("dap")

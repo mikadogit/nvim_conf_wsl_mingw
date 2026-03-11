@@ -88,11 +88,11 @@ M.dap = {
       "Make the .makefile saving errors and warnings into make_logs.txt",
     },
     ["<leader>mc"] = {
-      "<cmd>:! make clean & rm make_logs.txt <CR>",
+      "<cmd>:! make clean && rm make_logs.txt <CR>",
       "Make clear",
     },
     ["<leader>mce"] = {
-      "<cmd>:! make clean_exe & rm make_logs.txt <CR>",
+      "<cmd>:! make clean_exe && rm make_logs.txt <CR>",
       "Make clear",
     },
     ["<leader>fx"] = {
